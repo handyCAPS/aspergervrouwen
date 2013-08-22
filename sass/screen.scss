@@ -1,0 +1,87 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/css3";
+@import "compass/utilities";
+
+@import "normalize";
+@import "variables";
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	width: 100%;
+	font-size: $fontBase;
+}
+
+header {
+	@include clearfix;
+}
+
+#headerWrap {
+	width: $mainWidth;
+	margin: 0 auto;
+}
+
+#headerNav {
+	width: 100%;
+	background-color: black;
+		ul {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+				li {
+					float: left;
+					margin: $step1 + em $step1 + em;
+						a {
+							text-decoration: none;
+							font-size: $step2 + em;
+							color: $lightColor;
+							transition: color 0.6s ease 0.2s;
+								&:hover {
+									color: lighten($lightColor, 24);
+								}	
+						}
+				}
+		}
+}
+
+#welkom {
+	width: 33%;
+	display: inline-block;
+	float: left;
+	margin: $step3 + ex $step1 + em;
+}
+
+#logo {
+	display: inline-block; 
+	background-color: $lightColor;
+	float: left;
+	// width: 36%;
+	// min-height: $step3 + em;
+	margin: $step3 + ex;
+	padding: $step1 + em;
+	font-size: $step2 + em;
+}
+
+#contentWrap {
+	width: $mainWidth;
+	margin: 0 auto;
+}
+
+#sideBarWrap {
+	width: 30%;
+	float: left;
+	padding: $step1 + em;
+}
+
+#mainContentWrap {
+	width: 60%;
+	float: left;
+	padding: $step1 + em;
+}

@@ -1,0 +1,86 @@
+
+$mainWidth: 86%;
+
+		// COLORS
+
+$hue1: 210;
+$hue2: 180;
+
+$lightSat: 56%;
+$middleSat: 26%;
+$darkSat: 12%;
+
+$altlightSat: 76%;
+$altmiddleSat: 26%;
+$altdarkSat: 22%;
+
+$overlay1: 0.7;
+$overlay2: 0.53;
+
+$lightColor: hsl($hue1, $lightSat, 61%);
+$lightColorOverlay: hsla($hue1, $lightSat, 61%, $overlay1);
+$lightColorDesat: hsl($hue1, $middleSat, 75%);
+$lightColorDesatOverlay: hsla($hue1, $middleSat, 75%, $overlay1);
+$middleColor: hsl($hue1, $middleSat, 37%);
+$middleColorOverlay: hsla($hue2, $middleSat, 37%, $overlay1);
+$darkColor: hsl($hue1, $darkSat, 17%);
+$darkColorOverlay: hsla($hue1, $darkSat, 17%, $overlay2);
+
+$altlightColor: hsl($hue2, $altlightSat, 61%);
+$altlightColorOverlay: hsla($hue2, $altlightSat, 61%, $overlay1);
+$altlightColorDesat: hsl($hue2, $altmiddleSat, 75%);
+$altlightColorDesatOverlay: hsla($hue2, $altmiddleSat, 75%, $overlay1);
+$altmiddleColor: hsl($hue2, $altmiddleSat, 37%);
+$altmiddleColorOverlay: hsla($hue2, $altmiddleSat, 37%, $overlay1);
+$altdarkColor: hsl($hue2, $altdarkSat, 17%);
+$altdarkColorOverlay: hsla($hue2, $altdarkSat, 17%, $overlay2);
+
+$lightColorHex: #EBE54D;
+$lightColorDesatHex: #E2DF9A;
+$middleColorHex: #757449;
+$darkColor: #4B490B;
+
+$linkColor: $middleColor;
+$headerColor: $darkColor;
+
+		// FONTS
+
+$fontBase: 16px;
+
+$bodyFont: 'Noto Sans', sans-serif;
+$scriptFont: 'Allura', sans-serif;
+$headerFont: $scriptFont;
+
+		// MATEN
+
+$scale: 1.618;
+
+$step1: 1;
+$step2: $scale * $step1;
+$step3: $scale * $step2;
+$step4: $scale * $step3;
+$step5: $scale * $step4;
+$step6: $scale * $step5;
+$step7: $scale * $step6;
+$step-1: $step1 / $scale;
+$step-2: $step-1 / $scale;
+$step-3: $step-2 / $scale;
+$step-4: $step-3 / $scale;
+$step-5: $step-4 / $scale;
+$step-6: $step-5 / $scale;
+$step-7: $step-6 / $scale;
+
+$altstep1: 1.353;
+$altstep2: $scale * $altstep1;
+$altstep3: $scale * $altstep2;
+$altstep4: $scale * $altstep3;
+$altstep5: $scale * $altstep4;
+$altstep6: $scale * $altstep5;
+$altstep7: $scale * $altstep6;
+$altstep-1: $altstep1 / $scale;
+$altstep-2: $altstep-1 / $scale;
+$altstep-3: $altstep-2 / $scale;
+$altstep-4: $altstep-3 / $scale;
+$altstep-5: $altstep-4 / $scale;
+$altstep-6: $altstep-5 / $scale;
+$altstep-7: $altstep-6 / $scale;
