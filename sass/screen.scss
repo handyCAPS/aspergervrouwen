@@ -7,6 +7,7 @@
 @import "compass/utilities";
 
 @import "normalize";
+@import "fonts";
 @import "variables";
 
 * {
@@ -16,20 +17,92 @@
 body, html {
 	width: 100%;
 	font-size: $fontBase;
+	background-image: url("../images/debut_dark.png");
+	text-rendering: optimizeLegibility;
+	color: #222;
+	font-family: 'Maven Pro', sans-serif;
 }
 
 header {
 	@include clearfix;
 }
 
+p {
+	background-color: #8C8C8C;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headerFont;
+	color: $headerColor;
+}
+
+h1 {
+	font-size: $altstep2 + em;
+}
+
+h2 {
+	font-size: $step2 + em;
+}
+
+h3 {
+	font-size: $altstep1 + em;
+}
+
+h4 {
+	font-size: $step1 + em;
+}
+
+h5 {
+	font-size: $step-1 + em;
+}
+
+h6 {
+	font-size: $step-2 + em;
+}
+
+a {
+	color: $altlightColor;
+	text-decoration: none;
+	transition: color 0.4s ease 0.2s;
+		&:hover {
+			color: lighten($altlightColor, 12);
+		}
+}
+
+hr {
+	opacity: 0.4;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+img {
+	&.left {
+		padding: 0 $altstep-1 + em $step-2 + em 0;
+	}
+	&.right {
+		padding: 0 0 $step-2 + em $altstep-1 + em;
+	}
+}
+
 #headerWrap {
+	@include pie-clearfix;
 	width: $mainWidth;
 	margin: 0 auto;
 }
 
-#headerNav {
+#headerNavWrap {
 	width: 100%;
 	background-color: black;
+}
+
+#headerNav {
+	width: 100%;
 		ul {
 			display: inline-block;
 			margin: 0;
@@ -37,10 +110,10 @@ header {
 			list-style: none;
 				li {
 					float: left;
-					margin: $step1 + em $step1 + em;
+					margin: $altstep-1 + em $step1 + em;
 						a {
 							text-decoration: none;
-							font-size: $step2 + em;
+							font-size: $altstep1 + em;
 							color: $lightColor;
 							transition: color 0.6s ease 0.2s;
 								&:hover {
@@ -52,24 +125,56 @@ header {
 }
 
 #welkom {
-	width: 33%;
+	width: 38%;
 	display: inline-block;
 	float: left;
-	margin: $step3 + ex $step1 + em;
+	margin: $step3 + ex $step1 + em $step3 + ex 0;
+	background-color: #8C8C8C;
+	padding: 0;
+		h2 {
+			margin: $step-2 + em;
+			margin-left: $step-1 + em;
+			color: $thirdlightColor;
+			text-shadow: 0.3px 0.7px 0px black;
+		}
+		p {
+			padding: 0 $step1 + em;
+			margin-top: 0;
+		}
+}
+
+#logoImageWrap {
+	// background-image: url("../images/women-small.jpg");
+	z-index: 2;
+		img {
+			width: 100%;
+			z-index: -1;
+		}
 }
 
 #logo {
-	display: inline-block; 
-	background-color: $lightColor;
+	// display: inline-block; 
 	float: left;
-	// width: 36%;
-	// min-height: $step3 + em;
 	margin: $step3 + ex;
-	padding: $step1 + em;
-	font-size: $step2 + em;
+	width: 50.74%;
+		h1 {
+			// display: inline-block;
+			position: absolute;
+			top: $step4 + em;
+			background-color: $lightColor;
+			font-size: $step2 + em;
+			padding: $step-2 + em;
+			z-index: 99;
+		}
+		img {
+				// position: absolute;
+				// top: 0;
+				// width: 50%;
+			}
 }
 
 #contentWrap {
+	@include pie-clearfix;
 	width: $mainWidth;
 	margin: 0 auto;
 }
@@ -77,11 +182,71 @@ header {
 #sideBarWrap {
 	width: 30%;
 	float: left;
-	padding: $step1 + em;
+	// padding: $step1 + em;
+	margin-top: 0;
+		p {
+			padding: $step1 + em;
+			margin-top: 0;
+		}
+}
+
+#sideBar {
+	background-color: #8C8C8C;
 }
 
 #mainContentWrap {
 	width: 60%;
 	float: left;
-	padding: $step1 + em;
+	padding: $step2 + em;
+	padding-top: 0;
+		h2 {
+			color: $thirdlightColor;
+			text-shadow: 0.5px 1px 0px black;
+				&:first-of-type {
+					margin-top: 0;
+				}
+		}
+		p {
+			// border: 1px solid black;
+			padding: $step1 + em;
+				&:first-of-type {
+					margin-top: 0;
+				}
+		}
+		img {
+
+		}
+}
+
+#footerWrap {
+	@include pie-clearfix;
+	width: 90%;
+	margin: 0 auto;
+}
+
+footer {
+	width: 100%;
+		h2 {
+			color: $altmiddleColor;
+			margin-top: 0;
+			text-shadow: 0.5px 1px 0px black;
+		}
+		article {
+			float: left;
+			width: 28%;
+			padding: $step2 + em;
+			// border: 1px solid black;
+				p {
+					padding: $step1 + em;
+				}
+		}
+}
+
+#colofon, #reg {
+	padding-left: $step2 + em;
+	color: $altmiddleColor;
+}
+
+.pipe {
+	margin-top: -8px;
 }

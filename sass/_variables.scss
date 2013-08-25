@@ -3,16 +3,21 @@ $mainWidth: 86%;
 
 		// COLORS
 
-$hue1: 210;
-$hue2: 180;
+$hue1: 218;
+$hue2: $hue1 - 30;
+$hue3: $hue2 - 180;
 
 $lightSat: 56%;
 $middleSat: 26%;
 $darkSat: 12%;
 
-$altlightSat: 76%;
-$altmiddleSat: 26%;
+$altlightSat: 46%;
+$altmiddleSat: 46%;
 $altdarkSat: 22%;
+
+$thirdlightSat: 68%;
+$thirdmiddleSat: 46%;
+$thirddarkSat: 22%;
 
 $overlay1: 0.7;
 $overlay2: 0.53;
@@ -35,13 +40,17 @@ $altmiddleColorOverlay: hsla($hue2, $altmiddleSat, 37%, $overlay1);
 $altdarkColor: hsl($hue2, $altdarkSat, 17%);
 $altdarkColorOverlay: hsla($hue2, $altdarkSat, 17%, $overlay2);
 
-$lightColorHex: #EBE54D;
-$lightColorDesatHex: #E2DF9A;
-$middleColorHex: #757449;
-$darkColor: #4B490B;
+$thirdlightColor: hsl($hue3, $thirdlightSat, 61%);
+$thirdlightColorOverlay: hsla($hue3, $thirdlightSat, 61%, $overlay1);
+$thirdlightColorDesat: hsl($hue3, $thirdmiddleSat, 75%);
+$thirdlightColorDesatOverlay: hsla($hue3, $thirdmiddleSat, 75%, $overlay1);
+$thirdmiddleColor: hsl($hue3, $thirdmiddleSat, 37%);
+$thirdmiddleColorOverlay: hsla($hue3, $thirdmiddleSat, 37%, $overlay1);
+$thirddarkColor: hsl($hue3, $thirddarkSat, 17%);
+$thirddarkColorOverlay: hsla($hue3, $thirddarkSat, 17%, $overlay2);
 
 $linkColor: $middleColor;
-$headerColor: $darkColor;
+$headerColor: $altdarkColor;
 
 		// FONTS
 
@@ -49,7 +58,7 @@ $fontBase: 16px;
 
 $bodyFont: 'Noto Sans', sans-serif;
 $scriptFont: 'Allura', sans-serif;
-$headerFont: $scriptFont;
+$headerFont: 'caviar_dreamsregular', serif;
 
 		// MATEN
 
