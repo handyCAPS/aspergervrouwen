@@ -26,42 +26,17 @@
 			<?php get_sidebar(); ?>
 		</div><!--  end sideBarWrap  -->
 		<div id="mainContentWrap">
+			
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
 			<article>
-				<h2>Titel h2 die wat langer is</h2>
-				<p>
-					<img src="http://placecage.com/100/100" class="left">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+				<div class="content_div"><?php the_content(); ?></div>
 			</article>
-			<article>
-				<h2>Titel h2</h2>
-				<p>
-					<img src="http://fillmurray.com/100/100" class="right">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</article>
-			<article>
-				<h2>Titel h2</h2>
-				<p>
-					<img src="http://placekitten.com/100/100" class="left">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</article>
+
+			<?php endwhile; else: ?>
+			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+			<?php endif; ?>
+			
 		</div><!--  end mainContentWrap  -->
 	</div><!--  end contentWrap  -->
 

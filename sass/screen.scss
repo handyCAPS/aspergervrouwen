@@ -27,8 +27,9 @@ header {
 	@include clearfix;
 }
 
-p {
+.content_div {
 	background-color: #8C8C8C;
+	padding: $step1 + em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,6 +64,7 @@ h6 {
 a {
 	color: $altlightColor;
 	text-decoration: none;
+	text-shadow: 0.2px 0.6px 0px black;
 	transition: color 0.4s ease 0.2s;
 		&:hover {
 			color: lighten($altlightColor, 12);
@@ -82,12 +84,18 @@ hr {
 }
 
 img {
-	&.left {
+	&.left, .alignleft {
 		padding: 0 $altstep-1 + em $step-2 + em 0;
 	}
-	&.right {
+	&.right, .alignright {
 		padding: 0 0 $step-2 + em $altstep-1 + em;
 	}
+}
+
+blockquote {
+		&:before {
+			content: url(../images/icons/png/left_quote-512.png);
+		}
 }
 
 #headerWrap {
@@ -111,6 +119,9 @@ img {
 				li {
 					float: left;
 					margin: $altstep-1 + em $step1 + em;
+						li {
+							display: none;
+						}
 						a {
 							text-decoration: none;
 							font-size: $altstep1 + em;
@@ -131,14 +142,14 @@ img {
 	margin: $step3 + ex $step1 + em $step3 + ex 0;
 	background-color: #8C8C8C;
 	padding: 0;
-		h2 {
+		h2, h2>a {
 			margin: $step-2 + em;
 			margin-left: $step-1 + em;
 			color: $thirdlightColor;
 			text-shadow: 0.3px 0.7px 0px black;
 		}
 		p {
-			padding: 0 $step1 + em;
+			// padding: 0 $step1 + em;
 			margin-top: 0;
 		}
 }
@@ -208,7 +219,7 @@ img {
 		}
 		p {
 			// border: 1px solid black;
-			padding: $step1 + em;
+			// padding: $step1 + em;
 				&:first-of-type {
 					margin-top: 0;
 				}
