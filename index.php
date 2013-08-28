@@ -2,8 +2,8 @@
 	get_header();
  ?>
 
-<article id="welkom">
-				<h2>Featured article</h2>
+			<article id="featured" class="content_div">
+				<div class="corner_wrap"><h2>Featured article</h2></div>
 				<p>
 					<img src="http://placecage.com/150/100" class="left">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -17,7 +17,7 @@
 				<div id="logoImageWrap">
 					<img src="<?php echo THEMEPATH; ?>/images/women-small.jpg" alt="Asperger Vrouwen">
 				</div><!--  end logoImageWrap  -->
-				<h1>Asperger Vrouwen</h1>
+				<a href="<?php bloginfo('home'); ?>"><h1><?php bloginfo('title'); ?></h1></a>
 			</div><!--  end logo  -->
 		</div><!--  end headerWrap  -->
 	</header>
@@ -28,7 +28,7 @@
 		<div id="mainContentWrap">
 			
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
-			<article>
+			<article <?php post_class(); ?>>
 				<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 				<div class="content_div"><?php the_content(); ?></div>
 			</article>

@@ -3,7 +3,7 @@
 <head>
 	<title>Asperger vrouwen</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo THEMEPATH; ?>/stylesheets/screen.css">
-	<link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Source+Code+Pro' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
 <body>

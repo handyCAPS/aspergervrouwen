@@ -21,6 +21,7 @@ body, html {
 	text-rendering: optimizeLegibility;
 	color: #222;
 	font-family: 'Maven Pro', sans-serif;
+	z-index: -999;
 }
 
 header {
@@ -64,10 +65,18 @@ h6 {
 a {
 	color: $altlightColor;
 	text-decoration: none;
-	text-shadow: 0.2px 0.6px 0px black;
+	text-shadow: 0.2px 0.4px 0px black;
 	transition: color 0.4s ease 0.2s;
 		&:hover {
 			color: lighten($altlightColor, 12);
+		}
+}
+
+.content_div a {
+	@extend a;
+	color: lighten($altlightColor, 6);
+		&:hover {
+			color: darken($altlightColor, 6);
 		}
 }
 
@@ -75,26 +84,64 @@ hr {
 	opacity: 0.4;
 }
 
-.left {
+dt {
+	font-weight: bold;
+}
+
+code, tt {
+	font-family: 'Source Code Pro', monospace, sans-serif;
+	color: #333336;
+}
+
+.left, .alignleft {
 	float: left;
 }
 
-.right {
+.right, .alignright {
 	float: right;
 }
 
+.sticky {
+		h2:after {
+		content: url(../images/icons/vector/pin.svg);
+		position: relative;
+		left: $step-1 + em;
+		}
+		&:after {
+			@extend h2:after;
+			position: relative;
+			// right: $step1 + em;
+		}
+	}
+
 img {
-	&.left, .alignleft {
+	&.left, &.alignleft {
 		padding: 0 $altstep-1 + em $step-2 + em 0;
 	}
-	&.right, .alignright {
+	&.right, &.alignright {
 		padding: 0 0 $step-2 + em $altstep-1 + em;
 	}
 }
 
+.alignleft img {
+	padding: 0 $altstep-1 + em $step-2 + em 0;
+}
+
+.alignright img {
+	padding: 0 0 $step-2 + em $altstep-1 + em;
+}
+
 blockquote {
 		&:before {
-			content: url(../images/icons/png/left_quote-512.png);
+			content: url(../images/icons/vector/left_quote.svg);
+			position: relative;
+			left: -$step2 + em;
+		}
+		p:after {
+			content: url(../images/icons/vector/right_quote.svg);
+			position: relative;
+			right: -$step2 + em;
+			top: $step-1 + em;
 		}
 }
 
@@ -135,24 +182,38 @@ blockquote {
 		}
 }
 
-#welkom {
+#featured {
 	width: 38%;
 	display: inline-block;
 	float: left;
 	margin: $step3 + ex $step1 + em $step3 + ex 0;
-	background-color: #8C8C8C;
 	padding: 0;
-		h2, h2>a {
-			margin: $step-2 + em;
-			margin-left: $step-1 + em;
+	background-color: #8C8C8C;
+	z-index: 10;
+		h2 {
+			margin: $step-1 + em 0;
+			padding: $step-4 + em $step1 + ex;
+			margin-left: -$step2 + ex;
 			color: $thirdlightColor;
 			text-shadow: 0.3px 0.7px 0px black;
+			background-color: $thirddarkColor;
 		}
 		p {
-			// padding: 0 $step1 + em;
-			margin-top: 0;
+			padding: 0 $step1 + em $step1 + em;
+			margin: 0;
 		}
 }
+
+.corner_wrap:before {
+					content: "";
+					border: $step1 + em solid;
+					border-color: darken($thirddarkColor, 6) transparent transparent transparent ;
+					// z-index: 0;
+					top: 50px;
+					position: relative;
+					left: -20px;
+					margin-top: 0;
+				}
 
 #logoImageWrap {
 	// background-image: url("../images/women-small.jpg");
@@ -206,13 +267,18 @@ blockquote {
 }
 
 #mainContentWrap {
+	@include clearfix;
 	width: 60%;
 	float: left;
 	padding: $step2 + em;
 	padding-top: 0;
+		article {
+			margin-bottom: $step1 + em;
+			overflow: hidden;
+		}
 		h2 {
 			color: $thirdlightColor;
-			text-shadow: 0.5px 1px 0px black;
+			text-shadow: 0.64px 0.8px 0px black;
 				&:first-of-type {
 					margin-top: 0;
 				}
@@ -225,7 +291,7 @@ blockquote {
 				}
 		}
 		img {
-
+			max-width: 100%;
 		}
 }
 
