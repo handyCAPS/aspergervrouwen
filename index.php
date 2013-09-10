@@ -3,15 +3,27 @@
  ?>
 
 			<article id="featured" class="content_div">
-				<div class="corner_wrap"><h2>Featured article</h2></div>
+			<?php 
+				$featureQuery = new WP_Query('category_name=featured');
+				if($featureQuery->have_posts()): while($featureQuery->have_posts()): $featureQuery->the_post();
+
+			 ?>
+				<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+				<small>Geplaatst op <?php the_date(); ?> door <?php the_author(); ?></small>
 				<p>
-					<img src="http://placecage.com/150/100" class="left">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<?php 
+					if (has_post_thumbnail()) {
+						the_post_thumbnail();
+					}
+					the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>" class="lees_meer"> Lees meer ...</a>
+				<?php edit_post_link(); ?>
+				</p>
+			<?php endwhile; else : ?>
+				<p>
+					Hier hoort een featured article te staan Kim !
+				</p>
+			<?php endif;?>	
 			</article><!--  end welkom  -->
 			<div id="logo">
 				<div id="logoImageWrap">
@@ -26,15 +38,15 @@
 			<?php get_sidebar(); ?>
 		</div><!--  end sideBarWrap  -->
 		<div id="mainContentWrap">
-			
+			<!-- <?php  wp_reset_postdata();  ?> -->
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
 			<article <?php post_class(); ?>>
 				<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-				<div class="content_div"><?php the_content(); ?></div>
+				<div class="content_div"><?php the_content(); edit_post_link(); ?></div>
 			</article>
 
 			<?php endwhile; else: ?>
-			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+			<p><?php _e('Sorry, niets gevonden.'); ?></p>
 			<?php endif; ?>
 			
 		</div><!--  end mainContentWrap  -->
