@@ -23,7 +23,7 @@
 	//custom excerpt length
 	function wpfme_custom_excerpt_length( $length ) {
 		//the amount of words to return
-		return 20;
+		return 26;
 	}
 	add_filter( 'excerpt_length', 'wpfme_custom_excerpt_length');
 
@@ -43,6 +43,28 @@
 
 
 	// Obscure login screen error messages
-	function wpfme_login_obscure(){ return '<strong>Sorry</strong>: Think you have gone wrong somwhere!';}
+	function wpfme_login_obscure(){ return '<strong>Sorry</strong>: Dat zijn niet de goede inloggegevens !';}
 	add_filter( 'login_errors', 'wpfme_login_obscure' );
+	
+	function add_thumbnails() {
+		add_theme_support('post-thumbnails');
+		set_post_thumbnail_size( 150 );
+	}
+
+	add_action( "after_setup_theme", 'add_thumbnails' );
+
+	function asvr_sidebars() {
+		$args = array(
+		'id'            => 'sidebar1',
+		'name'          => __( 'Sidebar 1', 'aspergervrouwen' ),
+		'description'   => __( 'De eerste sidebar', 'aspergervrouwen' ),
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		);
+		register_sidebar( $args );
+	}
+
+	add_action( 'widgets_init', "asvr_sidebars" );
 

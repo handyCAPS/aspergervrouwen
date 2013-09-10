@@ -29,6 +29,7 @@ header {
 }
 
 .content_div {
+	@include clearfix;
 	background-color: #8C8C8C;
 	padding: $step1 + em;
 }
@@ -74,9 +75,10 @@ a {
 
 .content_div a {
 	@extend a;
-	color: lighten($altlightColor, 6);
+	color: lighten($altdarkColor, 6);
+	// text-shadow: 0.6px 0.6px 0px black;
 		&:hover {
-			color: darken($altlightColor, 6);
+			color: darken($altdarkColor, 6);
 		}
 }
 
@@ -91,6 +93,11 @@ dt {
 code, tt {
 	font-family: 'Source Code Pro', monospace, sans-serif;
 	color: #333336;
+}
+
+td {
+	padding: $step-3 + em $step-2 + em;
+	border: 1px solid $darkColor;
 }
 
 .left, .alignleft {
@@ -129,6 +136,11 @@ img {
 
 .alignright img {
 	padding: 0 0 $step-2 + em $altstep-1 + em;
+}
+
+.lees_meer {
+	float: right;
+	padding-right: $step1 + em;
 }
 
 blockquote {
@@ -183,6 +195,7 @@ blockquote {
 }
 
 #featured {
+	@include clearfix;
 	width: 38%;
 	display: inline-block;
 	float: left;
@@ -191,9 +204,9 @@ blockquote {
 	background-color: #8C8C8C;
 	z-index: 10;
 		h2 {
-			margin: $step-1 + em 0;
+			margin: $step-2 + em 0;
 			padding: $step-4 + em $step1 + ex;
-			margin-left: -$step2 + ex;
+			// margin-left: -$step2 + ex;
 			color: $thirdlightColor;
 			text-shadow: 0.3px 0.7px 0px black;
 			background-color: $thirddarkColor;
@@ -202,18 +215,20 @@ blockquote {
 			padding: 0 $step1 + em $step1 + em;
 			margin: 0;
 		}
+		img {
+			width: 42%;
+			float: left;
+			margin: $step1 + em $step1 + em $step1 + em 0;
+		}
+		small {
+			padding-left: $step1 + em;
+			display: block;
+		}
+		.post-edit-link {
+			padding-left: $step1 + em;
+			display: block;
+		}
 }
-
-.corner_wrap:before {
-					content: "";
-					border: $step1 + em solid;
-					border-color: darken($thirddarkColor, 6) transparent transparent transparent ;
-					// z-index: 0;
-					top: 50px;
-					position: relative;
-					left: -20px;
-					margin-top: 0;
-				}
 
 #logoImageWrap {
 	// background-image: url("../images/women-small.jpg");
@@ -256,14 +271,33 @@ blockquote {
 	float: left;
 	// padding: $step1 + em;
 	margin-top: 0;
-		p {
-			padding: $step1 + em;
-			margin-top: 0;
-		}
 }
 
 #sideBar {
-	background-color: #8C8C8C;
+	@extend .content_div;
+	padding: 0;
+		h2 {
+			background-color: $darkColor;
+			margin:  0;
+			padding: $step-2 + em;
+			// text-align: center;
+			color: $thirdlightColor;
+			text-shadow: 0.3px 0.7px 0px black;
+		}
+		ul {
+			padding: 0;
+			list-style: none;
+			margin: 0;
+				li {
+					padding: $step-3 + em $step-1 + em;
+					border-bottom: 1px solid $darkColor;
+						ul {
+							background-color: $altmiddleColor;
+							border: 1px solid $darkColor;
+							border-bottom: none;
+						}
+				}
+		}
 }
 
 #mainContentWrap {
