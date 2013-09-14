@@ -497,7 +497,7 @@ a:hover, #sideBar a:hover {
 
 /* line 76, ../sass/screen.scss */
 .content_div a, #sideBar a, #sideBar a {
-  color: #224d53;
+  color: #50d3e7;
 }
 /* line 80, ../sass/screen.scss */
 .content_div a:hover {
@@ -537,48 +537,44 @@ td {
 }
 
 /* line 112, ../sass/screen.scss */
-.sticky h2:after, .sticky .sticky:after {
+.sticky h2:after {
   content: url(../images/icons/vector/pin.svg);
   position: relative;
   left: 0.61805em;
 }
-/* line 117, ../sass/screen.scss */
-.sticky:after {
-  position: relative;
-}
 
-/* line 125, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 img.left, img.alignleft {
   padding: 0 0.83622em 0.38198em 0;
 }
-/* line 128, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 img.right, img.alignright {
   padding: 0 0 0.38198em 0.83622em;
 }
 
-/* line 133, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .alignleft img {
   padding: 0 0.83622em 0.38198em 0;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .alignright img {
   padding: 0 0 0.38198em 0.83622em;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .lees_meer {
   float: right;
   padding-right: 1em;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 blockquote:before {
   content: url(../images/icons/vector/left_quote.svg);
   position: relative;
   left: -1.618em;
 }
-/* line 152, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 blockquote p:after {
   content: url(../images/icons/vector/right_quote.svg);
   position: relative;
@@ -586,7 +582,7 @@ blockquote p:after {
   top: 0.61805em;
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 #headerWrap {
   *zoom: 1;
   width: 86%;
@@ -599,45 +595,45 @@ blockquote p:after {
   clear: both;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 #headerNavWrap {
   width: 100%;
   background-color: black;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 #headerNav {
   width: 100%;
 }
-/* line 173, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 #headerNav ul {
   display: inline-block;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 178, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 #headerNav ul li {
   float: left;
   margin: 0.83622em 1em;
 }
-/* line 181, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 #headerNav ul li li {
   display: none;
 }
-/* line 184, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 #headerNav ul li a, #headerNav ul li #sideBar a, #sideBar #headerNav ul li a {
   text-decoration: none;
   font-size: 1.353em;
   color: #648dd3;
   transition: color 0.6s ease 0.2s;
 }
-/* line 189, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 #headerNav ul li a:hover {
   color: #c3d3ee;
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 #featured {
   overflow: hidden;
   *zoom: 1;
@@ -649,7 +645,7 @@ blockquote p:after {
   background-color: #8C8C8C;
   z-index: 10;
 }
-/* line 206, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #featured h2 {
   margin: 0.38198em 0;
   padding: 0.14591em 1ex;
@@ -657,45 +653,44 @@ blockquote p:after {
   text-shadow: 0.3px 0.7px 0px black;
   background-color: #3b201c;
 }
-/* line 214, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 #featured p {
   padding: 0 1em 1em;
   margin: 0;
 }
-/* line 218, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 #featured img {
   width: 42%;
   float: left;
   margin: 1em 1em 1em 0;
 }
-/* line 223, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 #featured small {
   padding-left: 1em;
   display: block;
 }
-/* line 227, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 #featured .post-edit-link {
   padding-left: 1em;
-  display: block;
 }
 
-/* line 233, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 #logoImageWrap {
   z-index: 2;
 }
-/* line 236, ../sass/screen.scss */
+/* line 230, ../sass/screen.scss */
 #logoImageWrap img {
   width: 100%;
   z-index: -1;
 }
 
-/* line 242, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 #logo {
   float: left;
   margin: 2.61792ex;
   width: 50.74%;
 }
-/* line 247, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 #logo h1 {
   position: absolute;
   top: 4.2358em;
@@ -705,7 +700,7 @@ blockquote p:after {
   z-index: 99;
 }
 
-/* line 263, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 #contentWrap {
   *zoom: 1;
   width: 86%;
@@ -718,18 +713,18 @@ blockquote p:after {
   clear: both;
 }
 
-/* line 269, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 #sideBarWrap {
   width: 30%;
   float: left;
   margin-top: 0;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 #sideBar {
   padding: 0;
 }
-/* line 279, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 #sideBar h2 {
   background-color: #262a31;
   margin: 0;
@@ -737,25 +732,39 @@ blockquote p:after {
   color: #df6a58;
   text-shadow: 0.3px 0.7px 0px black;
 }
-/* line 287, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 #sideBar ul {
   padding: 0;
   list-style: none;
   margin: 0;
 }
-/* line 291, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 #sideBar ul li {
   padding: 0.23608em 0.61805em;
   border-bottom: 1px solid #262a31;
+}
+/* line 288, ../sass/screen.scss */
+#sideBar ul li a {
+  color: #19393e;
+}
+/* line 290, ../sass/screen.scss */
+#sideBar ul li a:hover {
+  color: #5fb6c4;
 }
 /* line 294, ../sass/screen.scss */
 #sideBar ul li ul {
   background-color: #337e8a;
   border: 1px solid #262a31;
   border-bottom: none;
+  margin: 0.38198em 0;
+  display: none;
+}
+/* line 303, ../sass/screen.scss */
+#sideBar .current-menu-item ul {
+  display: block;
 }
 
-/* line 303, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 #mainContentWrap {
   overflow: hidden;
   *zoom: 1;
@@ -764,30 +773,56 @@ blockquote p:after {
   padding: 1.618em;
   padding-top: 0;
 }
-/* line 309, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 #mainContentWrap article {
   margin-bottom: 1em;
   overflow: hidden;
 }
-/* line 313, ../sass/screen.scss */
+/* line 318, ../sass/screen.scss */
 #mainContentWrap h2 {
   color: #df6a58;
   text-shadow: 0.64px 0.8px 0px black;
+  margin-bottom: 0.61805em;
 }
-/* line 316, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 #mainContentWrap h2:first-of-type {
   margin-top: 0;
 }
-/* line 323, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 #mainContentWrap p:first-of-type {
   margin-top: 0;
 }
-/* line 327, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 #mainContentWrap img {
   max-width: 100%;
 }
+/* line 336, ../sass/screen.scss */
+#mainContentWrap .post_meta {
+  color: #648dd3;
+  margin-bottom: 0.61805em;
+  display: inline-block;
+}
+/* line 341, ../sass/screen.scss */
+#mainContentWrap .post-edit-link {
+  float: right;
+}
+/* line 343, ../sass/screen.scss */
+#mainContentWrap .post-edit-link:before {
+  content: url(../images/icons/vector/pen_alt2.svg);
+  height: 3px;
+}
+/* line 349, ../sass/screen.scss */
+#mainContentWrap .wp-post-image:nth-of-type(odd) {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+/* line 353, ../sass/screen.scss */
+#mainContentWrap .wp-post-image:nth-of-type(even) {
+  float: right;
+  margin: 0 0 1em 1em;
+}
 
-/* line 332, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 #footerWrap {
   *zoom: 1;
   width: 90%;
@@ -800,34 +835,35 @@ blockquote p:after {
   clear: both;
 }
 
-/* line 338, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 footer {
   width: 100%;
 }
-/* line 340, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 footer h2 {
   color: #337e8a;
   margin-top: 0;
   text-shadow: 0.5px 1px 0px black;
 }
-/* line 345, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 footer article {
   float: left;
   width: 28%;
   padding: 1.618em;
 }
-/* line 350, ../sass/screen.scss */
+/* line 378, ../sass/screen.scss */
 footer article p {
   padding: 1em;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 #colofon, #reg {
   padding-left: 1.618em;
   color: #337e8a;
+  margin-top: 0.61805em;
 }
 
-/* line 361, ../sass/screen.scss */
+/* line 390, ../sass/screen.scss */
 .pipe {
   margin-top: -8px;
 }

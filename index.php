@@ -42,7 +42,19 @@
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
 			<article <?php post_class(); ?>>
 				<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-				<div class="content_div"><?php the_content(); edit_post_link(); ?></div>
+				<small class="post_meta">Geplaatst op <?php the_date(); ?> door <?php the_author_posts_link(); ?></small>
+				<div class="content_div">
+					<?php 
+					if (has_post_thumbnail()) {
+						the_post_thumbnail();
+					}
+					the_excerpt(); 
+					?>
+					<a href="<?php the_permalink(); ?>">Lees meer ...</a>
+					<?php
+					edit_post_link(); 
+					?>
+				</div><!--  end content_div  -->
 			</article>
 
 			<?php endwhile; else: ?>

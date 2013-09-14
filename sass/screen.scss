@@ -75,7 +75,7 @@ a {
 
 .content_div a {
 	@extend a;
-	color: lighten($altdarkColor, 6);
+	color: $altlightColor;
 	// text-shadow: 0.6px 0.6px 0px black;
 		&:hover {
 			color: darken($altdarkColor, 6);
@@ -113,11 +113,6 @@ td {
 		content: url(../images/icons/vector/pin.svg);
 		position: relative;
 		left: $step-1 + em;
-		}
-		&:after {
-			@extend h2:after;
-			position: relative;
-			// right: $step1 + em;
 		}
 	}
 
@@ -226,7 +221,6 @@ blockquote {
 		}
 		.post-edit-link {
 			padding-left: $step1 + em;
-			display: block;
 		}
 }
 
@@ -291,12 +285,23 @@ blockquote {
 				li {
 					padding: $step-3 + em $step-1 + em;
 					border-bottom: 1px solid $darkColor;
+						a {
+							color: $altdarkColor;
+								&:hover {
+									color: lighten($altmiddleColor, 20);
+								}
+						}
 						ul {
 							background-color: $altmiddleColor;
 							border: 1px solid $darkColor;
 							border-bottom: none;
+							margin: $step-2 + em 0;
+							display: none;
 						}
 				}
+		}
+		.current-menu-item ul {
+			display: block;
 		}
 }
 
@@ -313,6 +318,7 @@ blockquote {
 		h2 {
 			color: $thirdlightColor;
 			text-shadow: 0.64px 0.8px 0px black;
+			margin-bottom: $step-1 + em;
 				&:first-of-type {
 					margin-top: 0;
 				}
@@ -326,6 +332,28 @@ blockquote {
 		}
 		img {
 			max-width: 100%;
+		}
+		.post_meta {
+			color: $lightColor;
+			margin-bottom: $step-1 + em;
+			display: inline-block;
+		}
+		.post-edit-link {
+			float: right;
+				&:before {
+					content: url(../images/icons/vector/pen_alt2.svg);
+					height: 3px;
+				}
+		}
+		.wp-post-image {
+				&:nth-of-type(odd){
+					float: left;
+					margin: 0 $step1 + em $step1 + em 0;
+				}
+				&:nth-of-type(even) {
+					float: right;
+					margin: 0 0 $step1 + em $step1 + em;
+				}
 		}
 }
 
@@ -356,6 +384,7 @@ footer {
 #colofon, #reg {
 	padding-left: $step2 + em;
 	color: $altmiddleColor;
+	margin-top: $step-1 + em;
 }
 
 .pipe {

@@ -23,7 +23,7 @@
 	//custom excerpt length
 	function wpfme_custom_excerpt_length( $length ) {
 		//the amount of words to return
-		return 26;
+		return 56;
 	}
 	add_filter( 'excerpt_length', 'wpfme_custom_excerpt_length');
 

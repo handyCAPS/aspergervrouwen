@@ -6,7 +6,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro|Source+Code+Pro' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <div id="outerWrap">
 	<header>
 		<div id="headerNavWrap">
